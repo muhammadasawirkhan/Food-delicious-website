@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            background: url('img/bg1.jpg') no-repeat center;
+            background-size: cover;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <button id="listner" >Click</button>
+        <input type="text" id="keys"/>
+        <div class="message">length can not be greater than 6</div>
+    </div>
+    <script>
+        var message=document.querySelector(".message"); 
+            message.style.display='none';
+           var keys=document.querySelector("#keys"); 
+           keys.addEventListener('keyup',
+           ()=>{
+              // alert('You pressed a key');
+              var len=keys.value;
+              if(len.length<=6);
+              else{
+                keys.style.backgroundColor='green';
+               message.style.display='block';
+              }
+               
+           });
+           var btn=document.querySelector("#listner");
+            btn.addEventListener('click',
+            ()=>{
+            alert('Click');
+            }
+            );
+            
+       
+    </script>
+</body>
+</html>
